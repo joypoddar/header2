@@ -1,56 +1,61 @@
 <template>
-  <header class="rounded-xl hover:bg-indigo-700">
+  <header class="hover:bg-indigo-700 rounded-xl">
     <nav
       class="flex items-center justify-between h-24 px-6"
       x-data="{ showMenu: false }"
     >
       <a href="#" class="text-xl font-extrabold text-white md:w-1/4">
-        tails<span class="text-red-500">.</span>
+        amore<span class="text-red-500">.</span>
       </a>
 
       <div
-        class="flex flex-col w-full h-full text-sm lg:text-base md:flex-row md:w-3/4"
+        class="fixed top-0 left-0 z-40 items-center w-full h-full p-3 bg-gray-900 bg-opacity-50 md:w-3/4 md:flex md:relative md:bg-transparent"
+        x-bind:class="{ flex: showMenu, hidden: !showMenu }"
       >
-        <!-- links -->
         <div
-          class="flex flex-col items-center justify-center md:mt-6 md:text-indigo-200 md:w-2/3 md:flex-row"
+          class="flex flex-col justify-center w-full h-full text-xl font-medium text-indigo-700 bg-white rounded-lg md:text-sm md:bg-transparent lg:text-base md:flex-row"
         >
-          <a
-            href="#"
-            class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 md:hover:text-white"
-            >Home</a
+          <!-- links -->
+          <div
+            class="flex flex-col items-center justify-center md:mt-6 md:text-indigo-200 md:w-2/3 md:flex-row"
           >
-          <a
-            href="#"
-            class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 md:hover:text-white"
-            >Features</a
-          >
-          <a
-            href="#"
-            class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 md:hover:text-white"
-            >Blog</a
-          >
-          <a
-            href="#"
-            class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 md:hover:text-white"
-            >Contact</a
-          >
-        </div>
+            <a
+              href="#"
+              class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 hover:text-indigo-900 md:hover:text-white"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 hover:text-indigo-900 md:hover:text-white"
+              >Features</a
+            >
+            <a
+              href="#"
+              class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 hover:text-indigo-900 md:hover:text-white"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="inline-block px-4 mx-2 font-medium md:px-0 lg:mx-3 hover:text-indigo-900 md:hover:text-white"
+              >Contact</a
+            >
+          </div>
 
-        <!-- sign in sign up -->
-        <div
-          class="flex flex-col items-center justify-end md:flex-row md:w-1/3"
-        >
-          <a
-            href="#"
-            class="text-indigo-200 md:mr-3 hover:text-white lg:mr-5 md:px-4 md:py-2 md:hover:bg-indigo-100 md:rounded-full md:hover:text-indigo-700"
-            >Sign in</a
+          <!-- sign in sign up -->
+          <div
+            class="flex flex-col items-center justify-end md:flex-row md:w-1/3"
           >
-          <a
-            href="#"
-            class="font-medium md:transition md:duration-150 md:ease-in-out md:text-indigo-600 md:bg-indigo-100 md:border md:border-transparent md:rounded-full md:px-4 md:py-2 whitespace-nowrap hover:bg-white focus:border-indigo-700 focus:ring-indigo-300 focus:outline-none"
-            >Sign up</a
-          >
+            <a
+              href="#"
+              class="px-5 rounded-md hover:bg-indigo-400 md:text-indigo-200 hover:text-indigo-900 md:mr-3 lg:mr-5 md:px-4 md:py-2 md:hover:bg-indigo-100 md:rounded-full md:hover:text-indigo-700"
+              >Sign in</a
+            >
+            <a
+              href="#"
+              class="px-4 font-medium rounded-md hover:bg-indigo-400 md:transition hover:text-indigo-900 md:duration-150 md:ease-in-out md:text-indigo-600 md:bg-indigo-100 md:border md:border-transparent md:rounded-full md:px-4 md:py-2 whitespace-nowrap md:hover:bg-white focus:border-indigo-700 focus:ring-indigo-300 focus:outline-none"
+              >Sign up</a
+            >
+          </div>
         </div>
       </div>
 
@@ -58,7 +63,7 @@
       <!-- hidden in md: screen -->
       <div
         x-on:click="showMenu = !showMenu"
-        class="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer md:hidden"
+        class="z-50 flex items-center justify-center w-10 h-10 rounded-full cursor-pointer md:hidden"
         x-bind:class="{
           'text-indigo-700 hover:bg-gray-200': showMenu,
           'text-indigo-200 hover:bg-indigo-700':!showMenu
