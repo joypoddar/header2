@@ -1,7 +1,9 @@
 <template>
   <div class="antialiased bg-indigo-600">
-    <Navbar />
-    <HeroContent />
+    <div class="mx-auto max-w-7xl">
+      <Navbar />
+      <HeroContent />
+    </div>
   </div>
 </template>
 
