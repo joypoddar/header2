@@ -18,10 +18,10 @@
           type="email"
           name="email"
           placeholder="Email Address"
-          class="h-12 px-6 rounded-l-full w-72 md:w-80"
+          class="w-56 h-12 px-6 rounded-l-full focus:outline-none sm:w-72 md:w-80"
         />
         <button
-          class="w-32 h-12 px-8 font-bold bg-indigo-400 rounded-r-full hover:bg-indigo-700 text-gray-50"
+          class="h-12 px-4 font-bold bg-indigo-400 rounded-r-full focus:outline-none sm:w-32 sm:px-8 hover:bg-indigo-700 text-gray-50"
         >
           Sign Up
         </button>
